@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To DevConnector </title>
+    <link rel="icon" type="images/x-icon" href="https://react.dev//favicon.ico"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="flex flex-col items-center justify-center">
+    <header class="fixed top-0 w-screen flex justify-between items-center px-6 py-4 text-slate-100 bg-stone-950/[.9]">
+        <div class="text-2xl">
+            <a href="../index.html" class="hover:text-cyan-600">
+                <i class="fa-solid fa-code"></i> DevConnector
+            </a>
+        </div>
+        <div class="text-base ">
+            <a href="notFound.html" class="mx-4">Not Found</a>
+            <a href="developers.html">Developers</a>
+            <a href="posts.html" class="mx-4">Posts</a>
+            <a href="dashboard.html"><i class="fa-solid fa-user"></i> Dashboard</a>
+            <a href="login.html" class="mx-4"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </header>
+    <main class="w-[70%] mt-20 flex-col gap-5">
+        <h1 class="text-5xl font-[600] text-cyan-600 my-4">Posts</h1>
+        <h2 class="text-2xl text-black flex items-center my-4 gap-2"><i class="fa-solid fa-user"></i> Welcome to the community</h2>
+        <button class="bg-cyan-600 p-2 w-full text-left text-white text-lg font-[600]">Say something...</button>
+        <form>
+            <textarea class="border border-black p-2 w-full h-28 my-3 placeholder:font-[400] placeholder:text-slate-700 placeholder:text-lg" placeholder="Create a post"></textarea>
+            <button type="submit" class="bg-slate-800 hover:bg-slate-600 text-white text-lg px-4 py-2">Submit</button>    
+        </form>
+    </main>
+    <section class="w-[70%] mt-8 flex-col gap-5 ">
+        <!-- <div class="card w-full flex">
+            <div class="w-[25%] flex items-center justify-center border border-black break-words">
+                <img class="imageComment" src="" alt="imageComment" >
+            </div>
+            <div class="w-[75%] ml-3 gap-3 border border-black flex flex-col items-left break-words py-8 pl-6">
+                <h1 class="commentText text-lg">Michael is not me : he is good boy</h1>
+                <h2 class="commentDate text-slate-400 text-sm">Posted on 12/14/2023</h2>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid text-lg bg-slate-100 px-4 py-2  cursor-pointer fa-thumbs-up"></i>
+                    <i class="fa-solid text-lg bg-slate-100 px-4 py-2  cursor-pointer fa-thumbs-down"></i>
+                    <button class="bg-cyan-500 hover:bg-cyan-600 px-3 py-2 text-white">Discussion</button>
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <script src="../js/posts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

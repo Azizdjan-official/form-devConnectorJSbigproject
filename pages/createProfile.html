@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To DevConnector </title>
+    <link rel="icon" type="images/x-icon" href="https://react.dev//favicon.ico"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center">
+    <header class="fixed top-0 w-screen flex justify-between items-center px-6 py-4 text-slate-100 bg-stone-950/[.9]">
+        <div class="text-2xl">
+            <a href="../index.html" class="hover:text-cyan-600">
+                <i class="fa-solid fa-code"></i> DevConnector
+            </a>
+        </div>
+        <div class="text-base ">
+            <a href="pages/notFound.html" class="mx-4">Not Found</a>
+            <a href="developers.html">Developers</a>
+            <a href="pages/posts.html" class="mx-4">Posts</a>
+            <a href="dashboard.html"><i class="fa-solid fa-user"></i> Dashboard</a>
+            <a href="login.html" class="mx-4"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </header>
+    <main class="w-[70%] mt-20 flex-col gap-5  ">
+        <h1 class="text-6xl font-[600] text-cyan-600 my-4">Create Your Profile</h1>
+        <h3 class="text-3xl text-black flex items-center my-4 gap-2"> <i class="fa-solid fa-user"></i>  Let's get some information to make your</h3>
+        <h6 class="text-slate-400 text-sm py-2">* = required field</h6>
+        <form>
+            <label>
+                <select class="w-full p-2 text-lg border">
+                    <option value="status">* Select Professional Status</option>
+                    <option value="Developer">Developer</option>
+                    <option value="junior">Junior Developer</option>
+                    <option value="senior">Senior Developer</option>
+                    <option value="manager">Manager</option>
+                    <option value="student">Student or Learning</option>
+                    <option value="teacher">Instructor or Teacher</option>
+                    <option value="intern">Intern</option>
+                    <option value="other">Other</option>
+                </select>
+                <h6 class="text-slate-400 text-sm py-2 ">Give us an idea of where you are at in your career</h6>
+            </label>
+            <label>
+                <input required class="w-full p-2 placeholder:text-slate-600 placeholder:text-lg border border-slate-400 " type="text" placeholder="Company">
+                <h6 class="text-slate-400 text-sm py-2 ">Could be your own company or one you work for</h6>
+            </label>
+            <label>
+                <input required class="w-full p-2 placeholder:text-slate-600 placeholder:text-lg border border-slate-400 " type="text" placeholder="Website">
+                <h6 class="text-slate-400 text-sm py-2 ">Could be your own or a company website</h6>
+            </label>
+            <label>
+                <input required  class="w-full p-2 placeholder:text-slate-600 placeholder:text-lg border border-slate-400 " type="text" placeholder="Location">
+                <h6 class="text-slate-400 text-sm py-2 ">City & state suggested (eg. Boston, MA)</h6>
+            </label>
+            <label>
+                <input required class="w-full p-2 placeholder:text-slate-600 placeholder:text-lg border border-slate-400 " type="text" placeholder="* Skills">
+                <h6 class="text-slate-400 text-sm py-2 ">Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)</h6>
+            </label>
+            <label>
+                <input class="w-full p-2 placeholder:text-slate-600 placeholder:text-lg border border-slate-400 " type="text" placeholder="Github Username">
+                <h6 class="text-slate-400 text-sm py-2 ">If you want your latest repos and a Github link, include your username</h6>
+            </label>
+            <label>
+                <textarea class="w-full p-2 border border-slate-400 placeholder:text-slate-600 placeholder:text-lg" cols="10" rows="2" placeholder="A short bio of yourself"></textarea>
+                <h6 class="text-slate-400 text-sm py-2 ">Tell us a little about yourself</h6>
+            </label>
+        
+        <div class="social-links flex items-center gap-2 my-4">
+            <button id="addSocialNetwork" class="bg-slate-200 hover:bg-slate-300 px-3 py-2 ">Add Social Network Links</button>
+            <p>Optional</p>
+        </div>
+        <div class="socials my-4 hidden">
+            <div class="flex justify-between my-3">
+                <i class="fa-brands fa-twitter text-4xl text-cyan-500"></i>
+                <input class="w-[95%] p-2 placeholder:text-lg border" type="text" placeholder="Twitter URL">
+            </div>
+            <div class="flex justify-between my-3">
+                <i class="fa-brands fa-square-facebook text-4xl text-cyan-900"></i>
+                <input class="w-[95%] p-2 placeholder:text-lg border" type="text" placeholder="Facebook URL">
+            </div>
+            <div class="flex justify-between my-3">
+                <i class="fa-brands fa-youtube text-4xl text-red-600"></i>
+                <input class="w-[95%] p-2 placeholder:text-lg border" type="text" placeholder="YouTube URL">
+            </div>
+            <div class="flex justify-between my-3">
+                <i class="fa-brands fa-linkedin text-4xl text-cyan-600"></i>
+                <input class="w-[95%] p-2 placeholder:text-lg border" type="text" placeholder="Lindekin URL">
+            </div>
+            <div class="flex justify-between my-3">
+                <i class="fa-brands fa-instagram text-4xl text-cyan-800"></i>
+                <input class="w-[95%] p-2 placeholder:text-lg border" type="text" placeholder="Instagram URL">
+            </div>
+        </div>
+        <div class="social-links flex items-center gap-4 my-10">
+            <button type="submit" class="bg-cyan-500 text-white hover:bg-cyan-400 px-4 py-2 ">Submit</button>
+            <a href="dashboard.html" class="bg-slate-200 hover:bg-slate-300 px-4 py-2 ">Go Back</a>
+        </div>
+    </form>
+    </main>
+    <script src="../js/createProfile.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html6

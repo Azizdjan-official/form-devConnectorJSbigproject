@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #17a2b8;
+    --dark-color: #343a40;
+    --light-color: #f4f4f4;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+  }
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    background: url(images/bgImage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
