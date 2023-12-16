@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",async()=>{
+document.addEventListener("DOMContentLoaded", async ()=>{
     let main = document.querySelector("main");
     let {data} = await axios.get(`https://nt-devconnector.onrender.com/api/auth`,
     {
@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded",async()=>{
             "x-auth-token":`${localStorage.getItem("userToken")}`
         }
     });
+
     
     let h2 = document.querySelector("h2");
     h2.innerHTML = `<i class="fa-solid fa-user"></i>  Welcome ${data.name}`
@@ -15,6 +16,8 @@ document.addEventListener("DOMContentLoaded",async()=>{
     let addExperience = document.querySelector("#addExperience");
     let addEducation = document.querySelector("#addEducation");
     let deleteBtn = document.querySelector("#deleteBtn");
+    const token = localStorage.getItem("userToken");
+
 
     try{
         let { data: profile } = await axios.get(`https://nt-devconnector.onrender.com/api/profile/me`,
@@ -39,11 +42,17 @@ document.addEventListener("DOMContentLoaded",async()=>{
             addEducation.addEventListener("click", async ()=>{
                 window.location.replace("./addEducation.html");
             })
-            deleteBtn.addEventListener("click", async ()=>{
-                if(alert("Are you sure ? This can not be undone after deleted")){
-                    localStorage.removeItem("userToken", data);
+            deleteBtn.addEventListener("click", async () => {
+                confirmInfo = confirm("Are you sure? This can NOT be undone! ");
+                if (confirmInfo) {
+                  let { data } = await axios.delete("https://nt-devconnector.onrender.com/api/profile", {
+                    headers: {
+                      "x-auth-token": `${token}`,
+                    },
+                  });
+                  window.location.replace("./login.html");
                 }
-            })
+              });
         }
     }catch(error){
         alert(error.response.data.msg);
